@@ -108,7 +108,7 @@ function cpustart() {
             do {
                 l = Math.round(Math.random() * 2);
                 c = Math.round(Math.random() * 2);
-            } while (jogo[1][c] != "");
+            } while (jogo[l][c] != "");
             jogo[l][c] = "O";
         } else if (nivel === 2) {
             //nivel 2
