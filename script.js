@@ -112,6 +112,7 @@ function cpustart() {
             jogo[l][c] = "O";
         } else if (nivel === 2) {
             //nivel 2
+            
         }
         verifica = verificavitoria();
         if (verifica != "") {
@@ -161,7 +162,18 @@ function start() {
         [document.getElementById("p4"), document.getElementById("p5"), document.getElementById("p6")],
         [document.getElementById("p7"), document.getElementById("p8"), document.getElementById("p9")]
     ];
+    atualizar();
+    if (quemcomeca == 1) {
+        quemcomeca = 0;
+        quemjoga = quemcomeca;
+        document.getElementById('dvstart').innerHTML = "Quem joga: Usuario";
 
+    } else {
+        quemcomeca = 1;
+        quemjoga = quemcomeca;
+        document.getElementById('dvstart').innerHTML = "Quem joga: Cpu";
+        cpustart();
+    }
 }
 
-window.addEventListener("load", start)
+window.addEventListener("load", start);
