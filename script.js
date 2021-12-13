@@ -121,6 +121,8 @@ function cpustart() {
         }
         atualizar();
         quemjoga = 0;
+        //Nivel 2
+        
     }
 
 }
